@@ -3,11 +3,12 @@
   "sourceLanguageTag": "en",
   "languageTags": [
     "en",
+    "de",
     "en-US",
     "es",
-    "zh",
-    "de",
-    "fr"
+    "fr",
+    "ja",
+    "zh"
   ],
   "modules": [
     "https://cdn.jsdelivr.net/npm/@inlang/plugin-i18next@4/dist/index.js",
@@ -17,6 +18,10 @@
     "https://cdn.jsdelivr.net/npm/@inlang/message-lint-rule-without-source@latest/dist/index.js"
   ],
   "plugin.inlang.i18next": {
-    "pathPattern": "./src/i18n/locales/{languageTag}/index.json"
+    "pathPattern": "./src/i18n/locales/{languageTag}/index.json",
+    "variableReferencePattern": [
+      "{{",
+      "}}"
+    ]
   }
 }
