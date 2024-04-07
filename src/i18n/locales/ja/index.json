@@ -17,7 +17,8 @@
     },
     "buttons": {
       "close": "閉じる"
-    }
+    },
+    "no_updates_found": "インストール済みコアに対してのアップデートはありません"
   },
   "core_info": {
     "author": "作者",
@@ -37,7 +38,12 @@
     "requires_license": {
       "all": "注意：このコアを実行するにはライセンスファイルが必要です"
     },
+    "firmware_too_low": "このコアはファームウェア v{core_firmware} が必要ですが、現在インストールされているファームウェアは v{pocket_firmware} です",
     "not_in_inventory": "{coreName} はコア インベントリにありません",
+    "platform": {
+      "edit": "編集"
+    },
+    "replaced": "このコアは <1>{replacementCore}</1> で置き換えられます",
     "platforms": "プラットフォーム",
     "release_date": "リリース日",
     "releases": {
@@ -137,7 +143,10 @@
     "scale": "拡縮"
   },
   "instance_json": {
-    "close_button": "閉じる"
+    "close_button": "閉じる",
+    "skipped_file": "{file_name} をスキップ",
+    "title": "インスタンス JSON ファイルのビルド",
+    "wrote_file": "{file_name} 書き込み"
   },
   "layout": {
     "cores": "コア",
@@ -231,8 +240,17 @@
     "photos": {
       "title": "写真のエクスポート",
       "palette": "パレット",
-      "close": "閉じる"
+      "close": "閉じる",
+      "export_all": "全てエクスポート"
     }
+  },
+  "saves": {
+    "backups": "バックアップ: {count}",
+    "confirm_delete": "このバックアップ先を削除してもよろしいですか？",
+    "controls": {
+      "add_backup_location": "バックアップ先を追加"
+    },
+    "not_found": "見つかりません"
   },
   "screenshot_info": {
     "controls": {
@@ -251,6 +269,7 @@
   "settings": {
     "3d_pocket": {
       "title": "Pocket の色:",
+      "body_label": "ボディ",
       "buttons_label": "ボタン",
       "match_body": "ボディ色に合わせる"
     },
@@ -267,6 +286,7 @@
     },
     "disconnect": {
       "button": "切断",
+      "ramble": "\"Connect To Pocket\" 画面に戻る (SDカード/USBドライブの取り出し操作はしません)",
       "title": "切断"
     },
     "reconnect": {
@@ -280,7 +300,7 @@
       "title": "ログ",
       "button": "ログフォルダを開く"
     },
-    "thanks": "感謝:"
+    "thanks": "謝辞:"
   },
   "uninstall_core": {
     "confirm_text": "このコアはアンインストールされますが、ゲーム、セーブ、ライブラリデータ、プラットフォーム情報は削除されません。続行しますか？",
