@@ -37,6 +37,7 @@
     "requires_license": {
       "all": "注意：このコアを実行するにはライセンスファイルが必要です"
     },
+    "not_in_inventory": "{coreName} はコア インベントリにありません",
     "platforms": "プラットフォーム",
     "release_date": "リリース日",
     "releases": {
@@ -52,7 +53,22 @@
       "cartridges": "カートリッジ"
     },
     "version": "バージョン",
-    "display_modes_title": "表示モード"
+    "display_modes_title": "表示モード",
+    "display_modes": {
+      "crt_trinitron": "トリニトロンCRT",
+      "grayscale_lcd": "グレイスケールLCD",
+      "original_gb_dmg": "GB (初代)",
+      "original_gbp": "GB Pocket",
+      "original_gbp_light": "GB Pocket Light",
+      "reflective_color_lcd": "反射型カラーLCD",
+      "original_gbc_lcd": "GB Color",
+      "original_gbc_lcd_plus": "GB Color+",
+      "backlit_color_lcd": "バックライト付きカラーLCD",
+      "original_gba_lcd": "GBA",
+      "original_gba_sp_101": "GBA SP",
+      "original_gg": "ゲームギア",
+      "original_gg_plus": "ゲームギア+"
+    }
   },
   "core_info_required_files": {
     "close": "閉じる",
@@ -61,18 +77,28 @@
     "file_status": {
       "needs_update_from_archive": "更新可能",
       "missing_but_on_archive": "ダウンロード可能",
-      "exists": "ダウンロード済み"
+      "not_found": "アーカイブにありません",
+      "exists": "ダウンロード済み",
+      "not_checked": "不明",
+      "found_at_root": "ファイル照合済み. ルートフォルダに見つかりました",
+      "root_needs_update": "ファイルミスマッチ. ルートフォルダを確認してください"
     }
   },
   "cores": {
     "controls": {
+      "category": "カテゴリ",
+      "sort": "並び替え",
       "refresh": "更新",
       "search": "検索",
       "updatable": "アップデート可能",
+      "update_all": "全てをアップデート",
+      "filters_group": "フィルタ",
       "sort_options": {
         "last_update": "最終更新"
       }
-    }
+    },
+    "installed": "インストール済み ({count})",
+    "not_installed": "インストール可能 ({count})"
   },
   "error": {
     "retry": "再試行",
@@ -88,6 +114,19 @@
       "close": "閉じる"
     },
     "remove_button": "削除"
+  },
+  "firmware": {
+    "current": "現在のファームウェアバージョン: v{version}",
+    "downloading_firmware": "ファームウェアをダウンロード中...",
+    "loaded_firmware": "ファームウェア {version} は SD カード上にあります",
+    "options": {
+      "latest": "v{version} (最新版)"
+    }
+  },
+  "games": {
+    "controls": {
+      "refresh": "更新"
+    }
   },
   "image_editor": {
     "cancel": "キャンセル",
@@ -134,10 +173,15 @@
       "inputs": {
         "background": "背景"
       },
+      "save": "保存",
       "reset": "リセット"
     }
   },
   "mister_sync": {
+    "controls": {
+      "back": "終了",
+      "search": "セーブを検索"
+    },
     "login": {
       "connect": "接続"
     },
@@ -168,11 +212,24 @@
     },
     "save": "保存"
   },
+  "progress": {
+    "remaining_time": "残り時間(推定): {remainingTime}"
+  },
+  "save_info": {
+    "confirm_restore": "バックアップから復元しますか？",
+    "controls": {
+      "back": "リストに戻る",
+      "hide_unchanged": "変更していない項目を非表示",
+      "search": "検索"
+    }
+  },
   "save_states": {
     "controls": {
+      "clear_selection": "選択解除",
       "search": "検索"
     },
     "photos": {
+      "title": "写真のエクスポート",
       "palette": "パレット",
       "close": "閉じる"
     }
@@ -192,11 +249,17 @@
     "no_screenshots": "スクリーンショットを撮影するとここに表示されます"
   },
   "settings": {
+    "3d_pocket": {
+      "title": "Pocket の色:",
+      "buttons_label": "ボタン",
+      "match_body": "ボディ色に合わせる"
+    },
     "language": {
       "title": "言語"
     },
     "archive": {
-      "save": "保存"
+      "save": "保存",
+      "title": "ROMとBIOSファイルのアーカイブ (必要なファイル)"
     },
     "clear_file_cache": {
       "button": "ファイルキャッシュを削除",
@@ -205,14 +268,36 @@
     "disconnect": {
       "button": "切断",
       "title": "切断"
-    }
+    },
+    "reconnect": {
+      "title": "このアプリケーションが開かれたときに再接続する"
+    },
+    "turbo_downloads": {
+      "checkbox": "高速ダウンロードを有効にする",
+      "title": "高速ダウンロード"
+    },
+    "logs": {
+      "title": "ログ",
+      "button": "ログフォルダを開く"
+    },
+    "thanks": "感謝:"
   },
   "uninstall_core": {
+    "confirm_text": "このコアはアンインストールされますが、ゲーム、セーブ、ライブラリデータ、プラットフォーム情報は削除されません。続行しますか？",
     "confirm_title": "コアをアンインストール"
   },
   "zip_install": {
     "cancel_button": "キャンセル",
     "confirm_button": "確認",
-    "remove_duplicate": "重複ファイルを削除"
+    "remove_duplicate": "重複ファイルを削除",
+    "scanning": "ファイルをスキャン中...",
+    "replace": {
+      "ok": "許可",
+      "cancel": "スキップ",
+      "title": "コアを置き換えますか？"
+    }
+  },
+  "version": {
+    "replaced": "置き換え済み"
   }
 }
