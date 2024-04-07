@@ -4,7 +4,8 @@
     "update_available": "アップデートがあります! {version}"
   },
   "app": {
-    "connect_button": "Pocket / SDカードで接続"
+    "connect_button": "Pocket / SDカードで接続",
+    "not_pocket_tip": "このフォルダは Pocket のファイルシステムではないようです. SD カード は Pocket 上で初期化されている必要があります."
   },
   "clean_files": {
     "close_button": "閉じる"
@@ -60,6 +61,7 @@
     },
     "version": "バージョン",
     "display_modes_title": "表示モード",
+    "display_mode_warning": "この表示モードを使用するにはコアをアップデートする必要があります. 有効にしますか？",
     "display_modes": {
       "crt_trinitron": "トリニトロンCRT",
       "grayscale_lcd": "グレイスケールLCD",
@@ -107,6 +109,7 @@
     "not_installed": "インストール可能 ({count})"
   },
   "error": {
+    "report": "GitHubで報告する場合、以下のテキストと、あなたの操作内容を併記してください。",
     "retry": "再試行",
     "title": "エラー"
   },
@@ -117,21 +120,29 @@
     "loading": "ロード中...",
     "new": {
       "add_extension": "追加",
-      "close": "閉じる"
+      "close": "閉じる",
+      "validating_archive_name": "アーカイブをチェック中 \"{name}\"..."
     },
-    "remove_button": "削除"
+    "remove_button": "削除",
+    "types": {
+      "filesystem": "ローカルファイル"
+    }
   },
   "firmware": {
     "current": "現在のファームウェアバージョン: v{version}",
     "downloading_firmware": "ファームウェアをダウンロード中...",
+    "load_firmware": "SD カード に読み込む",
     "loaded_firmware": "ファームウェア {version} は SD カード上にあります",
     "options": {
-      "latest": "v{version} (最新版)"
-    }
+      "latest": "v{version} (最新版)",
+      "previous_versions": "以前のバージョン"
+    },
+    "remove_button": "削除"
   },
   "games": {
     "controls": {
-      "refresh": "更新"
+      "refresh": "更新",
+      "search": "検索"
     }
   },
   "image_editor": {
@@ -235,12 +246,14 @@
   "save_states": {
     "controls": {
       "clear_selection": "選択解除",
+      "delete_selection": "選択されたものを削除 ({count})",
       "search": "検索"
     },
     "photos": {
       "title": "写真のエクスポート",
       "palette": "パレット",
       "close": "閉じる",
+      "export_selected": "選択したものをエクスポート",
       "export_all": "全てエクスポート"
     }
   },
@@ -318,6 +331,7 @@
     }
   },
   "version": {
+    "update_alt": "アップデートがあります (v {version})",
     "replaced": "置き換え済み"
   }
 }
