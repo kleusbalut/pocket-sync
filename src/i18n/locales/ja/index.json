@@ -30,6 +30,7 @@
       "uninstall": "アンインストール",
       "update": "更新"
     },
+    "inputs": "操作方法",
     "modal": {
       "close": "閉じる",
       "input_core": "コア",
@@ -55,12 +56,13 @@
     "required_files_count": "{count} / {total} ファイル",
     "settings": "設定",
     "sponsor": "スポンサー",
-    "supports": "サポート",
+    "supports": "対応",
     "supports_items": {
-      "cartridges": "カートリッジ"
+      "cartridges": "カートリッジ",
+      "save_states_and_sleep": "セーブステート / スリープ"
     },
     "version": "バージョン",
-    "display_modes_title": "表示モード",
+    "display_modes_title": "表示モード設定",
     "display_mode_warning": "この表示モードを使用するにはコアをアップデートする必要があります. 有効にしますか？",
     "display_modes": {
       "crt_trinitron": "トリニトロンCRT",
@@ -141,12 +143,14 @@
   },
   "games": {
     "controls": {
+      "category": "カテゴリ",
       "refresh": "更新",
       "search": "検索"
     }
   },
   "image_editor": {
     "cancel": "キャンセル",
+    "import_image": "画像をインポート",
     "remove": "削除",
     "reset": "リセット",
     "rotate": "回転",
@@ -182,6 +186,7 @@
     "item": {
       "duplicate": "複製",
       "rename": "名前の変更",
+      "copy_code": "シェアコードをコピー",
       "delete": "削除"
     },
     "add_via_code": {
@@ -205,15 +210,22 @@
     "login": {
       "connect": "接続"
     },
+    "unsupported": "{platform} はマップされていません",
     "mapping": {
       "close": "閉じる",
       "clear": "クリア",
       "reset": "初期設定に戻す"
     }
   },
+  "news_feed": {
+    "last_updated": "最終更新 <1></1>",
+    "updates_from": "<1>OpenFPGA Cores Inventory</1> からのアップデート"
+  },
   "platform_info": {
     "controls": {
-      "back": "リストに戻る"
+      "back": "リストに戻る",
+      "data_packs": "データパック",
+      "image_packs": "画像パック"
     },
     "cores": "コア",
     "edit": "編集"
@@ -221,6 +233,8 @@
   "platforms": {
     "cancel": "キャンセル",
     "controls": {
+      "data_packs": "データパック",
+      "image_packs": "画像パック",
       "search": "検索"
     },
     "data_packs": {
@@ -244,6 +258,7 @@
     }
   },
   "save_states": {
+    "cartridge": "カートリッジ",
     "controls": {
       "clear_selection": "選択解除",
       "delete_selection": "選択されたものを削除 ({count})",
@@ -281,17 +296,19 @@
   },
   "settings": {
     "3d_pocket": {
-      "title": "Pocket の色:",
+      "title": "Pocket 本体の色:",
       "body_label": "ボディ",
       "buttons_label": "ボタン",
       "match_body": "ボディ色に合わせる"
     },
     "language": {
+      "checkbox": "常に 英語(US) を使用する",
       "title": "言語"
     },
     "archive": {
       "save": "保存",
-      "title": "ROMとBIOSファイルのアーカイブ (必要なファイル)"
+      "title": "ROMとBIOSファイルのアーカイブ (必要なファイル)",
+      "warning": "著作権で保護されている可能性のあるROM(アーケード含)とBIOSファイルのダウンロードについては、お住まいの国や地域の法律を確認してください。\n問題がなければ、下記のURLを入力欄にコピーして「保存」を押してください。"
     },
     "clear_file_cache": {
       "button": "ファイルキャッシュを削除",
